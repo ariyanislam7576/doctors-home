@@ -3,7 +3,6 @@ import { Card, Col } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 const SingleServiceForHome = (props) => {
-    console.log(props);
     const {ServiceImage,ServiceId,ServiceDes,ServiceName} = props.service
     return (
         <div>

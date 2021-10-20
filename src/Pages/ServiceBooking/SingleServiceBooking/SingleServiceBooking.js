@@ -17,7 +17,7 @@ const SingleServiceBooking = (props) => {
                     </Card.Body>
                 </Card>
             </Col>
-            <h3 className='text-info'>Thanks for choseing our service <br /> we will contact You soon</h3>
+            <h3 className='text-infoku'>Thanks for choseing our service <br /> we will contact You soon</h3>
         </div>
     );
 };

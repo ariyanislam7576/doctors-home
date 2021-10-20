@@ -12,7 +12,6 @@ const Booking = () => {
         const findPerson = persons.find(person => person.id === parseInt(serviceId))
         doctor.push(findPerson)
     }
-    console.log(serviceId);
     return (
         <div className='container'>
             <Row xs={1} md={1} className="g-4 mx-auto m-5">

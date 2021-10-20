@@ -12,7 +12,6 @@ const ServiceBooking = () => {
         const findService = services.find(myService => myService.ServiceId === parseInt(userId))
         Service.push(findService)
     }
-    console.log(userId);
     return (
         <div className='container'>
             <Row xs={1} md={2} className="g-4 mx-auto m-5">

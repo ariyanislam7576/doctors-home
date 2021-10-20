@@ -12,7 +12,6 @@ import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Booking from './Pages/Booking/Booking';
 import Footer from './Pages/Home/Footer/Footer';
 import OurServices from './Pages/OurServices/OurServices';
-import OurService from './Pages/OurServices/OurService/OurService';
 import ServiceBooking from './Pages/ServiceBooking/ServiceBooking';
 function App() {
   return (
@@ -36,9 +35,9 @@ function App() {
             <Route path='/doctor/:serviceId'>
               <Booking></Booking>
             </Route>
-            <Route path='/doctors'>
+            <PrivateRoute path='/doctors'>
               <Service></Service>
-            </Route>
+            </PrivateRoute>
             <Route path='/singleservice/:userId'>
                 <ServiceBooking></ServiceBooking>
             </Route>
