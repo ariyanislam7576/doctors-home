@@ -16,7 +16,7 @@ const SingleService = (props) => {
                             This is a longer card with supporting text below as a natural
                             lead-in to additional content. This content is a little bit longer.
                         </Card.Text>
-                        <Link to={`/singleservice/${id}`}><button className="btn-primary px-4 rounded">Book</button></Link>
+                        <Link to={`/doctor/${id}`}><button className="btn-primary px-4 rounded">Book</button></Link>
                         
                     </Card.Body>
                 </Card>

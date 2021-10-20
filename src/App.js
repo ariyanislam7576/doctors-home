@@ -13,6 +13,7 @@ import Booking from './Pages/Booking/Booking';
 import Footer from './Pages/Home/Footer/Footer';
 import OurServices from './Pages/OurServices/OurServices';
 import OurService from './Pages/OurServices/OurService/OurService';
+import ServiceBooking from './Pages/ServiceBooking/ServiceBooking';
 function App() {
   return (
     <div className="App">
@@ -32,11 +33,14 @@ function App() {
             <PrivateRoute path='/service'>
               <OurServices></OurServices>
             </PrivateRoute>
-            <Route path='/singleservice/:serviceId'>
+            <Route path='/doctor/:serviceId'>
               <Booking></Booking>
             </Route>
             <Route path='/doctors'>
               <Service></Service>
+            </Route>
+            <Route path='/singleservice/:userId'>
+                <ServiceBooking></ServiceBooking>
             </Route>
             <Route path='/login'>
               <LogIn></LogIn>

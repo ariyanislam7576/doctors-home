@@ -16,7 +16,7 @@ const Doctorsd = (props) => {
                             This is a longer card with supporting text below as a natural
                             lead-in to additional content. This content is a little bit longer.
                         </Card.Text>
-                        <NavLink to={`/singleservice/${id}`}>
+                        <NavLink to={`/doctor/${id}`}>
                         <button className="btn-primary px-3 rounded">Book now</button>
                         </NavLink>
                        

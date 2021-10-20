@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 const SingleServiceForHome = (props) => {
     console.log(props);
@@ -14,6 +15,9 @@ const SingleServiceForHome = (props) => {
                         <Card.Text>
                             {ServiceDes.slice(0,100)}
                         </Card.Text>
+                        <NavLink to={`/singleservice/${ServiceId}`}>
+                        <button className="btn-primary px-3 rounded">Pursuse this Service</button>
+                        </NavLink>
                     </Card.Body>
                 </Card>
             </Col>
