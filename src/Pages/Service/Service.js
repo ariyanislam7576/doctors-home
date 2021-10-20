@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
 import usePerson from '../../Hooks/usePerson';
-import Booking from '../Booking/Booking';
 import SingleService from './SingleService/SingleService';
 
 

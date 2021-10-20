@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './Pages/Home/Header/Header'
@@ -12,6 +11,8 @@ import Authprovider from './Context/Authprovider';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Booking from './Pages/Booking/Booking';
 import Footer from './Pages/Home/Footer/Footer';
+import OurServices from './Pages/OurServices/OurServices';
+import OurService from './Pages/OurServices/OurService/OurService';
 function App() {
   return (
     <div className="App">
@@ -29,10 +30,13 @@ function App() {
               <About></About>
             </PrivateRoute>
             <PrivateRoute path='/service'>
-              <Service></Service>
+              <OurServices></OurServices>
             </PrivateRoute>
             <Route path='/singleservice/:serviceId'>
               <Booking></Booking>
+            </Route>
+            <Route path='/doctors'>
+              <Service></Service>
             </Route>
             <Route path='/login'>
               <LogIn></LogIn>

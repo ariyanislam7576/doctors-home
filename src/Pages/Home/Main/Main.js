@@ -5,7 +5,7 @@ import Doctorsd from './Doctors/Doctorsd';
 const Main = () => {
     const [doctors, setDoctors] = useState([])
     useEffect(() => {
-        fetch('service.json')
+        fetch('https://raw.githubusercontent.com/ariyanislam7576/json-file/main/service.json')
             .then(res => res.json())
             .then(data => setDoctors(data))
     }, [])
