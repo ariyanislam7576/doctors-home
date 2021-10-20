@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
+import usePerson from '../../Hooks/usePerson';
 import Booking from '../Booking/Booking';
 import SingleService from './SingleService/SingleService';
 
 
 const Service = () => {
-    const [persons, setPersons] = useState([])
-    useEffect(() => {
-        fetch('service.json')
-            .then(res => res.json())
-            .then(data => setPersons(data))
-    }, [])
+    const [persons] = usePerson()
     return (
         <div className='container my-5'>
             <Row xs={1} md={3} className="g-4">

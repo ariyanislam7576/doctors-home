@@ -1,9 +1,8 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
-const SingleService = (props) => {
-    const {img,specialist,name ,id} = props.person
+const SingleBooking = (props) => {
+    const {img, name, specialist ,fee,meetTime} = props.singleDoctor
     return (
         <div>
             <Col>
@@ -16,8 +15,8 @@ const SingleService = (props) => {
                             This is a longer card with supporting text below as a natural
                             lead-in to additional content. This content is a little bit longer.
                         </Card.Text>
-                        <Link to={`/singleservice/${id}`}><button className="btn-primary px-4 rounded">Book</button></Link>
-                        
+                        <p>Fee: {fee}</p>
+                        <p>Meet {meetTime}</p>
                     </Card.Body>
                 </Card>
             </Col>
@@ -25,4 +24,4 @@ const SingleService = (props) => {
     );
 };
 
-export default SingleService;
+export default SingleBooking;

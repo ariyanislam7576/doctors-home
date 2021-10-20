@@ -1,14 +1,27 @@
 import React from 'react';
+import { Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import usePerson from '../../Hooks/usePerson';
+import SingleBooking from './SingleBooking/SingleBooking';
 
 const Booking = () => {
-    const {serviceId} = useParams()
+    const [persons] = usePerson()
+    const { serviceId } = useParams({})
+    const doctor = []
+    if (persons?.length) {
+        const findPerson = persons.find(person => person.id === parseInt(serviceId))
+        doctor.push(findPerson)
+    }
     console.log(serviceId);
-    const [persons] =usePerson()
     return (
-        <div>
-            <h1>This is dynamic part {serviceId}</h1>
+        <div className='container'>
+            <Row xs={1} md={1} className="g-4 mx-auto m-5">
+
+            {
+                doctor.map(singleDoctor => <SingleBooking key={singleDoctor.id}
+                singleDoctor={singleDoctor}></SingleBooking>)
+            }
+            </Row>
         </div>
     );
 };
